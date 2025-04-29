@@ -72,6 +72,27 @@ Next, you can link your Turborepo to your Remote Cache by running the following 
 npx turbo link
 ```
 
+## CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration with the following checks:
+
+- **Linting**: ESLint runs on all JavaScript/TypeScript files
+- **Type Checking**: TypeScript type checking ensures type safety
+- **Build Verification**: Ensures the project builds successfully
+
+Local development is enhanced with:
+
+- **Pre-commit hooks**: Automatically format and lint code before commits
+- **Pre-push hooks**: Run lint, type-check, and build before pushing to remote
+
+To set up the pre-commit hooks locally after cloning:
+
+```bash
+pnpm install
+```
+
+This will automatically set up the hooks through the prepare script.
+
 ## Useful Links
 
 Learn more about the power of Turborepo:
